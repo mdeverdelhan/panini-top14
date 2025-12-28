@@ -1,0 +1,19 @@
+.sticker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 3em;
+    min-height: 4em;
+    background: lightgray;
+
+    .numero {
+        font-size: 1.6em;
+    }
+
+    &.possede {
+        background: green;
+        color: white;
+    }
+}

@@ -1,7 +1,30 @@
 
 
 <main class="main">
-  <h1>{{ title() }}</h1>
+  <h1 class="titre">{{ title() }}</h1>
   <div class="content">
+    <h2>Outil de suivi des cartes Panini Top 14 de Léon et Victor</h2>
+
+    <div>
+      <h3>Compteurs</h3>
+      <div class="compteurs">
+        <div class="compteur">
+          <span class="nbr">{{totalStickers()}}</span> stickers en tout
+        </div>
+        <div class="compteur">
+          <span class="nbr">{{stickersPossedes()}}</span> stickers possédés
+        </div>
+        <div class="compteur">
+          <span class="nbr">{{stickersManquants()}}</span> stickers manquants
+        </div>
+      </div>
+    </div>
+
+    <div class="liste-de-stickers">
+      @for(sticker of stickers(); track sticker.id) {
+        <app-sticker [donneesSticker]="sticker"></app-sticker>
+      }
+    </div>
+
   </div>
 </main>
