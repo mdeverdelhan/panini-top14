@@ -358,4 +358,6 @@ export class App {
 
   protected readonly stickersManquants = computed(() => this.totalStickers() - this.stickersPossedes());
 
+  protected readonly stickersEnDouble = computed(() => this.stickers().filter(s => (s.exemplaires || 0) > 1).length);
+
 }

@@ -1,5 +1,7 @@
 
 <div class="sticker" [class.possede]="donneesSticker().possession">
     <div class="numero">{{donneesSticker().id}}</div>
-
 </div>
+@if (donneesSticker().exemplaires) {
+<span class="compteur-exemplaires">{{donneesSticker().exemplaires}}</span>
+}
