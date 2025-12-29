@@ -1,4 +1,5 @@
 export interface DonneeSticker {
     id: number,
-    possession: boolean
+    possession: boolean,
+    exemplaires?: number
 }
