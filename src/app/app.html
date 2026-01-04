@@ -7,16 +7,16 @@
     <div class="entete">
       <h2>Outil de suivi des cartes Panini Top 14 de Léon et Victor - Saison 2025-2026</h2>
       <div class="compteurs">
-        <div class="compteur" (click)="afficherTousLesStickers()">
+        <div class="compteur" [class.choisi]="compteurChoisi() === 'tous'" (click)="afficherTousLesStickers()">
           <span class="nbr">{{stickers().length}}</span> stickers en tout
         </div>
-        <div class="compteur" (click)="afficherLesStickersPossedes()">
+        <div class="compteur" [class.choisi]="compteurChoisi() === 'possedes'" (click)="afficherLesStickersPossedes()">
           <span class="nbr">{{stickersPossedes().length}}</span> stickers possédés
         </div>
-        <div class="compteur" (click)="afficherLesStickersManquants()">
+        <div class="compteur" [class.choisi]="compteurChoisi() === 'manquants'" (click)="afficherLesStickersManquants()">
           <span class="nbr">{{stickersManquants().length}}</span> stickers manquants
         </div>
-        <div class="compteur" (click)="afficherLesStickersEnDouble()">
+        <div class="compteur" [class.choisi]="compteurChoisi() === 'doublons'" (click)="afficherLesStickersEnDouble()">
           <span class="nbr">{{stickersEnDouble().length}}</span> stickers en double
         </div>
       </div>

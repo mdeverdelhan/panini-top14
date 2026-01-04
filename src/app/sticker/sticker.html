@@ -3,5 +3,5 @@
     <div class="numero">{{donneesSticker().id}}</div>
 </div>
 @if (donneesSticker().exemplaires) {
-<span class="compteur-exemplaires">{{donneesSticker().exemplaires}}</span>
+<span class="compteur-exemplaires" [ngClass]="'couleur-' + donneesSticker().exemplaires">{{donneesSticker().exemplaires}}</span>
 }

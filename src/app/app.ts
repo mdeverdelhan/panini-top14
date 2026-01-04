@@ -2,6 +2,8 @@ import { Component, computed, signal } from '@angular/core';
 import { Sticker } from './sticker/sticker';
 import { DonneeSticker } from './donnee-sticker.type';
 
+type CompteurType = 'tous' | 'possedes' | 'manquants' | 'doublons';
+
 @Component({
   selector: 'app-root',
   imports: [
@@ -359,19 +361,26 @@ export class App {
   protected stickerAffiches = signal(this.stickers());
 
   public afficherTousLesStickers(): void {
+    this.compteurChoisi.set('tous');
     this.stickerAffiches.set(this.stickers());
   }
 
   public afficherLesStickersPossedes(): void {
+    this.compteurChoisi.set('possedes');
     this.stickerAffiches.set(this.stickersPossedes());
   }
 
   public afficherLesStickersManquants(): void {
+    this.compteurChoisi.set('manquants');
     this.stickerAffiches.set(this.stickersManquants());
   }
 
   public afficherLesStickersEnDouble(): void {
+    this.compteurChoisi.set('doublons');
     this.stickerAffiches.set(this.stickersEnDouble());
   }
+
+
+  protected compteurChoisi = signal<CompteurType>('tous');
 
 }

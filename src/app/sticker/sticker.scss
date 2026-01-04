@@ -26,11 +26,22 @@
 
     .compteur-exemplaires {
         position: absolute;
-        background-color: yellow;
         border-radius: 50px;
         border: 1px solid black;
         padding: 4px 8px;
         top: 48px;
         right: -8px;
+
+        &.couleur-2 {
+            background-color: yellow;
+        }
+
+        &.couleur-3 {
+            background-color: orange;
+        }
+
+        &.couleur-4, &.couleur-5, &.couleur-6 {
+            background-color: purple;
+        }
     }
 }
