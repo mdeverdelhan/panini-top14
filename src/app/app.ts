@@ -352,12 +352,26 @@ export class App {
   { id: 336, possession: true, exemplaires: 2 }
 ]);
 
-  protected readonly totalStickers = computed(() => this.stickers().length);
+  protected readonly stickersPossedes = computed(() => this.stickers().filter(s => s.possession));
+  protected readonly stickersManquants = computed(() => this.stickers().filter(s => !s.possession));
+  protected readonly stickersEnDouble = computed(() => this.stickers().filter(s => (s.exemplaires || 0) > 1));
 
-  protected readonly stickersPossedes = computed(() => this.stickers().filter(s => s.possession).length);
+  protected stickerAffiches = signal(this.stickers());
 
-  protected readonly stickersManquants = computed(() => this.totalStickers() - this.stickersPossedes());
+  public afficherTousLesStickers(): void {
+    this.stickerAffiches.set(this.stickers());
+  }
 
-  protected readonly stickersEnDouble = computed(() => this.stickers().filter(s => (s.exemplaires || 0) > 1).length);
+  public afficherLesStickersPossedes(): void {
+    this.stickerAffiches.set(this.stickersPossedes());
+  }
+
+  public afficherLesStickersManquants(): void {
+    this.stickerAffiches.set(this.stickersManquants());
+  }
+
+  public afficherLesStickersEnDouble(): void {
+    this.stickerAffiches.set(this.stickersEnDouble());
+  }
 
 }

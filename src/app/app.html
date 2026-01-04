@@ -7,23 +7,23 @@
     <div class="entete">
       <h2>Outil de suivi des cartes Panini Top 14 de Léon et Victor - Saison 2025-2026</h2>
       <div class="compteurs">
-        <div class="compteur">
-          <span class="nbr">{{totalStickers()}}</span> stickers en tout
+        <div class="compteur" (click)="afficherTousLesStickers()">
+          <span class="nbr">{{stickers().length}}</span> stickers en tout
         </div>
-        <div class="compteur">
-          <span class="nbr">{{stickersPossedes()}}</span> stickers possédés
+        <div class="compteur" (click)="afficherLesStickersPossedes()">
+          <span class="nbr">{{stickersPossedes().length}}</span> stickers possédés
         </div>
-        <div class="compteur">
-          <span class="nbr">{{stickersManquants()}}</span> stickers manquants
+        <div class="compteur" (click)="afficherLesStickersManquants()">
+          <span class="nbr">{{stickersManquants().length}}</span> stickers manquants
         </div>
-        <div class="compteur">
-          <span class="nbr">{{stickersEnDouble()}}</span> stickers en double
+        <div class="compteur" (click)="afficherLesStickersEnDouble()">
+          <span class="nbr">{{stickersEnDouble().length}}</span> stickers en double
         </div>
       </div>
     </div>
 
     <div class="liste-de-stickers">
-      @for(sticker of stickers(); track sticker.id) {
+      @for(sticker of stickerAffiches(); track sticker.id) {
         <app-sticker [donneesSticker]="sticker"></app-sticker>
       }
     </div>

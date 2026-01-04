@@ -32,6 +32,10 @@
                     .nbr {
                         font-size: 3em;
                     }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
