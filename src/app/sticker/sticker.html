@@ -1,7 +1,7 @@
 
-<div class="sticker" [class.possede]="donneesSticker().possession">
+<div class="sticker" [class.possede]="stickerPossede()">
     <div class="numero">{{donneesSticker().id}}</div>
 </div>
-@if (donneesSticker().exemplaires) {
+@if (donneesSticker().exemplaires > 1) {
 <span class="compteur-exemplaires" [ngClass]="'couleur-' + donneesSticker().exemplaires">{{donneesSticker().exemplaires}}</span>
 }

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { DonneeSticker } from '../donnee-sticker.type';
 import { NgClass } from '@angular/common';
 
@@ -13,4 +13,6 @@ import { NgClass } from '@angular/common';
 export class Sticker {
 
   donneesSticker = input.required<DonneeSticker>();
+
+  stickerPossede = computed<boolean>(() => this.donneesSticker().exemplaires > 0);
 }
