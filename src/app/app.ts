@@ -1,4 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
 import { Sticker } from './sticker/sticker';
 import { DonneeSticker } from './donnee-sticker.type';
 
@@ -32,7 +33,7 @@ export class App {
   { id: 14, exemplaires: 0 },
   { id: 15, exemplaires: 1 },
   { id: 16, exemplaires: 0 },
-  { id: 17, exemplaires: 0 },
+  { id: 17, exemplaires: 1 },
   { id: 18, exemplaires: 0 },
   { id: 19, exemplaires: 1 },
   { id: 20, exemplaires: 1 },
@@ -44,7 +45,7 @@ export class App {
   { id: 26, exemplaires: 1 },
   { id: 27, exemplaires: 0 },
   { id: 28, exemplaires: 1 },
-  { id: 29, exemplaires: 0 },
+  { id: 29, exemplaires: 1 },
   { id: 30, exemplaires: 0 },
   { id: 31, exemplaires: 1 },
   { id: 32, exemplaires: 1 },
@@ -57,7 +58,7 @@ export class App {
   { id: 39, exemplaires: 2 },
   { id: 40, exemplaires: 0 },
   { id: 41, exemplaires: 1 },
-  { id: 42, exemplaires: 0 },
+  { id: 42, exemplaires: 1 },
   { id: 43, exemplaires: 1 },
   { id: 44, exemplaires: 1 },
   { id: 45, exemplaires: 1 },
@@ -67,7 +68,7 @@ export class App {
   { id: 49, exemplaires: 0 },
   { id: 50, exemplaires: 1 },
   { id: 51, exemplaires: 1 },
-  { id: 52, exemplaires: 0 },
+  { id: 52, exemplaires: 1 },
   { id: 53, exemplaires: 1 },
   { id: 54, exemplaires: 0 },
   { id: 55, exemplaires: 1 },
@@ -75,7 +76,7 @@ export class App {
   { id: 57, exemplaires: 1 },
   { id: 58, exemplaires: 1 },
   { id: 59, exemplaires: 1 },
-  { id: 60, exemplaires: 2 },
+  { id: 60, exemplaires: 1 },
   { id: 61, exemplaires: 2 },
   { id: 62, exemplaires: 1 },
   { id: 63, exemplaires: 2 },
@@ -94,11 +95,11 @@ export class App {
   { id: 76, exemplaires: 1 },
   { id: 77, exemplaires: 2 },
   { id: 78, exemplaires: 0 },
-  { id: 79, exemplaires: 0 },
+  { id: 79, exemplaires: 1 },
   { id: 80, exemplaires: 1 },
   { id: 81, exemplaires: 1 },
   { id: 82, exemplaires: 1 },
-  { id: 83, exemplaires: 0 },
+  { id: 83, exemplaires: 1 },
   { id: 84, exemplaires: 1 },
   { id: 85, exemplaires: 2 },
   { id: 86, exemplaires: 1 },
@@ -118,7 +119,7 @@ export class App {
   { id: 100, exemplaires: 1 },
   { id: 101, exemplaires: 1 },
   { id: 102, exemplaires: 1 },
-  { id: 103, exemplaires: 0 },
+  { id: 103, exemplaires: 1 },
   { id: 104, exemplaires: 0 },
   { id: 105, exemplaires: 1 },
   { id: 106, exemplaires: 0 },
@@ -128,7 +129,7 @@ export class App {
   { id: 110, exemplaires: 1 },
   { id: 111, exemplaires: 1 },
   { id: 112, exemplaires: 1 },
-  { id: 113, exemplaires: 0 },
+  { id: 113, exemplaires: 1 },
   { id: 114, exemplaires: 3 },
   { id: 115, exemplaires: 3 },
   { id: 116, exemplaires: 1 },
@@ -142,10 +143,10 @@ export class App {
   { id: 124, exemplaires: 1 },
   { id: 125, exemplaires: 0 },
   { id: 126, exemplaires: 0 },
-  { id: 127, exemplaires: 0 },
-  { id: 128, exemplaires: 0 },
+  { id: 127, exemplaires: 1 },
+  { id: 128, exemplaires: 1 },
   { id: 129, exemplaires: 2 },
-  { id: 130, exemplaires: 2 },
+  { id: 130, exemplaires: 1 },
   { id: 131, exemplaires: 1 },
   { id: 132, exemplaires: 1 },
   { id: 133, exemplaires: 1 },
@@ -154,12 +155,12 @@ export class App {
   { id: 136, exemplaires: 1 },
   { id: 137, exemplaires: 1 },
   { id: 138, exemplaires: 1 },
-  { id: 139, exemplaires: 0 },
+  { id: 139, exemplaires: 1 },
   { id: 140, exemplaires: 0 },
   { id: 141, exemplaires: 1 },
   { id: 142, exemplaires: 1 },
   { id: 143, exemplaires: 3 },
-  { id: 144, exemplaires: 0 },
+  { id: 144, exemplaires: 1 },
   { id: 145, exemplaires: 1 },
   { id: 146, exemplaires: 2 },
   { id: 147, exemplaires: 1 },
@@ -177,7 +178,7 @@ export class App {
   { id: 159, exemplaires: 1 },
   { id: 160, exemplaires: 2 },
   { id: 161, exemplaires: 0 },
-  { id: 162, exemplaires: 0 },
+  { id: 162, exemplaires: 1 },
   { id: 163, exemplaires: 1 },
   { id: 164, exemplaires: 2 },
   { id: 165, exemplaires: 1 },
@@ -187,7 +188,7 @@ export class App {
   { id: 169, exemplaires: 1 },
   { id: 170, exemplaires: 0 },
   { id: 171, exemplaires: 2 },
-  { id: 172, exemplaires: 0 },
+  { id: 172, exemplaires: 1 },
   { id: 173, exemplaires: 1 },
   { id: 174, exemplaires: 3 },
   { id: 175, exemplaires: 0 },
@@ -206,7 +207,7 @@ export class App {
   { id: 188, exemplaires: 0 },
   { id: 189, exemplaires: 0 },
   { id: 190, exemplaires: 0 },
-  { id: 191, exemplaires: 0 },
+  { id: 191, exemplaires: 1 },
   { id: 192, exemplaires: 0 },
   { id: 193, exemplaires: 2 },
   { id: 194, exemplaires: 1 },
@@ -217,7 +218,7 @@ export class App {
   { id: 199, exemplaires: 0 },
   { id: 200, exemplaires: 2 },
   { id: 201, exemplaires: 3 },
-  { id: 202, exemplaires: 0 },
+  { id: 202, exemplaires: 1 },
   { id: 203, exemplaires: 1 },
   { id: 204, exemplaires: 2 },
   { id: 205, exemplaires: 0 },
@@ -253,7 +254,7 @@ export class App {
   { id: 235, exemplaires: 0 },
   { id: 236, exemplaires: 1 },
   { id: 237, exemplaires: 1 },
-  { id: 238, exemplaires: 0 },
+  { id: 238, exemplaires: 1 },
   { id: 239, exemplaires: 3 },
   { id: 240, exemplaires: 1 },
   { id: 241, exemplaires: 1 },
@@ -313,7 +314,7 @@ export class App {
   { id: 295, exemplaires: 1 },
   { id: 296, exemplaires: 0 },
   { id: 297, exemplaires: 1 },
-  { id: 298, exemplaires: 0 },
+  { id: 298, exemplaires: 1 },
   { id: 299, exemplaires: 1 },
   { id: 300, exemplaires: 0 },
   { id: 301, exemplaires: 0 },
@@ -359,6 +360,16 @@ export class App {
   protected readonly stickersEnDouble = computed(() => this.stickers().filter(s => (s.exemplaires || 0) > 1));
 
   protected stickerAffiches = signal(this.stickers());
+
+  constructor(private clipboard: Clipboard) {}
+
+  public copierListesDansPressePapier(): void {
+    const texte = "Stickers manquants :\n"
+      + this.stickersManquants().map(s => s.id).join(', ')
+      + "\n\nStickers en double :\n"
+      + this.stickersEnDouble().map(s => s.id).join(', ');
+    this.clipboard.copy(texte);
+  }
 
   public afficherTousLesStickers(): void {
     this.compteurChoisi.set('tous');

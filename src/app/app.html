@@ -6,6 +6,7 @@
 
     <div class="entete">
       <h2>Outil de suivi des cartes Panini Top 14 de Léon et Victor - Saison 2025-2026</h2>
+      <div class="presse-papier" (click)="copierListesDansPressePapier()">[Copier les listes dans le presse-papier]</div>
       <div class="compteurs">
         <div class="compteur" [class.choisi]="compteurChoisi() === 'tous'" (click)="afficherTousLesStickers()">
           <span class="nbr">{{stickers().length}}</span> stickers en tout

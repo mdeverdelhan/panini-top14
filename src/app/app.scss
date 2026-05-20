@@ -14,6 +14,16 @@
         max-width: 70vw;
         .entete {
             margin: 2em 0;
+
+            .presse-papier {
+                font-size: 1.2em;
+                color: blue;
+                margin: 1em 0;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
             .compteurs {
                 display: flex;
                 gap: 1em;
